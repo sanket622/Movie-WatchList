@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/movie-watchlist-frontend/static/js/main.3d506882.js",
+    "index.html": "/movie-watchlist-frontend/index.html",
+    "main.3d506882.js.map": "/movie-watchlist-frontend/static/js/main.3d506882.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.3d506882.js"
+  ]
+}

@@ -1,5 +1,3 @@
-// actions/movieActions.js
-
 import axios from 'axios';
 
 export const FETCH_MOVIES = 'FETCH_MOVIES';
@@ -46,33 +44,27 @@ export const deleteMovie = (id) => async (dispatch) => {
   }
 };
 
-export const toggleWatched = (id) => async (dispatch, getState) => {
+export const toggleWatched = (id) => async (dispatch) => {
   try {
-    const movie = getState().movies.find((m) => m._id === id);
-    const updatedMovie = { ...movie, watched: !movie.watched };
-    const response = await axios.put(`http://localhost:5000/api/movies/${id}`, updatedMovie);
+    const response = await axios.put(`http://localhost:5000/api/movies/toggle-watched/${id}`);
     dispatch({ type: TOGGLE_WATCHED, payload: response.data });
   } catch (error) {
     console.error(error);
   }
 };
 
-export const rateMovie = (id, rating) => async (dispatch, getState) => {
+export const rateMovie = (id, rating) => async (dispatch) => {
   try {
-    const movie = getState().movies.find((m) => m._id === id);
-    const updatedMovie = { ...movie, rating };
-    const response = await axios.put(`http://localhost:5000/api/movies/${id}`, updatedMovie);
+    const response = await axios.put(`http://localhost:5000/api/movies/rate/${id}`, { rating });
     dispatch({ type: RATE_MOVIE, payload: response.data });
   } catch (error) {
     console.error(error);
   }
 };
 
-export const reviewMovie = (id, review) => async (dispatch, getState) => {
+export const reviewMovie = (id, review) => async (dispatch) => {
   try {
-    const movie = getState().movies.find((m) => m._id === id);
-    const updatedMovie = { ...movie, review };
-    const response = await axios.put(`http://localhost:5000/api/movies/${id}`, updatedMovie);
+    const response = await axios.put(`http://localhost:5000/api/movies/review/${id}`, { review });
     dispatch({ type: REVIEW_MOVIE, payload: response.data });
   } catch (error) {
     console.error(error);

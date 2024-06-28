@@ -1,5 +1,3 @@
-// src/components/MovieListItem.js
-
 import React, { useState } from 'react';
 import AddEditMovieForm from './AddEditMovieForm';
 
@@ -61,7 +59,7 @@ const MovieListItem = ({ movie, onDelete, onToggleWatched, onEdit, onRate, onRev
             onChange={(e) => setRating(e.target.value)}
             placeholder="Rating"
             min="1"
-            max="10"
+            max="5"
           />
           <button onClick={handleRateSubmit}>Submit Rating</button>
         </div>

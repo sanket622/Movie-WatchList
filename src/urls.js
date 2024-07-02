@@ -1,0 +1,1 @@
+export const baseurl = `https://movie-watchlist-backend-lgbv.onrender.com`

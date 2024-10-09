@@ -1,1 +1,1 @@
-export const baseurl = `https://movie-watchlist-backend-lgbv.onrender.com`
+export const baseurl = `https://movie-watchlist-backend-sigma.vercel.app/`

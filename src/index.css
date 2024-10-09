@@ -1,10 +1,95 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: lightblue; 
-    color: #333; 
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', Arial, sans-serif; /* A modern and clean font */
+  line-height: 1.8;
+  background: linear-gradient(to right, #6a11cb, #2575fc); /* A vibrant gradient background */
+  color: #fff; /* White text for better contrast */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background 0.5s ease-in-out; /* Smooth transition for background changes */
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent container */
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  transition: transform 0.3s ease-in-out;
+  max-width: 100%;
+  width: 600px; /* Limits width for large screens */
+}
+
+.container:hover {
+  transform: scale(1.05); /* Slight zoom-in on hover */
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+/* Responsive Design: Media Queries */
+@media (max-width: 1024px) {
+  body {
+    background: linear-gradient(to bottom, #6a11cb, #2575fc); /* Change gradient for smaller screens */
+    font-size: 0.9rem; /* Slightly smaller text */
   }
   
+  h1 {
+    font-size: 2.5rem; /* Adjust heading size */
+  }
+  
+  p {
+    font-size: 1.1rem; /* Adjust paragraph size */
+  }
+
+  .container {
+    padding: 1.5rem; /* Reduce padding for smaller screens */
+    width: 90%; /* Make the container more flexible */
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* Further reduce heading size */
+  }
+  
+  p {
+    font-size: 1rem; /* Reduce paragraph size */
+  }
+
+  .container {
+    padding: 1.2rem; /* Reduce padding more for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem; /* Smaller headings on mobile */
+  }
+
+  p {
+    font-size: 0.9rem; /* Smaller paragraph text */
+  }
+
+  .container {
+    width: 100%; /* Full width for mobile */
+    padding: 1rem; /* Minimal padding on mobile */
+  }
+}

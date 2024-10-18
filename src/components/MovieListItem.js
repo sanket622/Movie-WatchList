@@ -45,7 +45,6 @@ const MovieListItem = ({ movie, onDelete, onToggleWatched, onEdit, onRate, onRev
 
       {showEditForm && (
         <div>
-          <h4>Edit Movie</h4>
           <AddEditMovieForm movieToEdit={movie} onFormSubmit={() => setShowEditForm(false)} />
         </div>
       )}

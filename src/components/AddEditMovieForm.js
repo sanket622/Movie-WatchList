@@ -1,15 +1,14 @@
-// src/components/AddEditMovieForm.js
-
-import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { addMovie, editMovie } from '../actions/movieActions';
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { addMovie, editMovie } from "../actions/movieActions";
+import "./AddEditMovieForm.css";
 
 const AddEditMovieForm = ({ movieToEdit, onFormSubmit }) => {
   const [formData, setFormData] = useState({
-    title: '',
-    description: '',
-    releaseYear: '',
-    genre: '',
+    title: "",
+    description: "",
+    releaseYear: "",
+    genre: "",
   });
 
   useEffect(() => {
@@ -36,20 +35,23 @@ const AddEditMovieForm = ({ movieToEdit, onFormSubmit }) => {
     } else {
       dispatch(addMovie(formData));
     }
-    setFormData({ title: '', description: '', releaseYear: '', genre: '' });
-    onFormSubmit();
+    setFormData({ title: "", description: "", releaseYear: "", genre: "" });
+    if (onFormSubmit) {
+      onFormSubmit();
+    }
   };
 
   return (
-    <div>
-      <h2>{movieToEdit ? 'Edit Movie' : 'Add Movie'}</h2>
-      <form onSubmit={handleSubmit}>
+    <div className="movie-form-container">
+      <h2 className="form-title">{movieToEdit ? "Edit Movie" : "Add Movie"}</h2>
+      <form className="movie-form" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Title"
           name="title"
           value={formData.title}
           onChange={handleChange}
+          className="form-input"
           required
         />
         <input
@@ -58,6 +60,7 @@ const AddEditMovieForm = ({ movieToEdit, onFormSubmit }) => {
           name="description"
           value={formData.description}
           onChange={handleChange}
+          className="form-input"
         />
         <input
           type="number"
@@ -65,6 +68,7 @@ const AddEditMovieForm = ({ movieToEdit, onFormSubmit }) => {
           name="releaseYear"
           value={formData.releaseYear}
           onChange={handleChange}
+          className="form-input"
         />
         <input
           type="text"
@@ -72,8 +76,11 @@ const AddEditMovieForm = ({ movieToEdit, onFormSubmit }) => {
           name="genre"
           value={formData.genre}
           onChange={handleChange}
+          className="form-input"
         />
-        <button type="submit">{movieToEdit ? 'Update' : 'Add'}</button>
+        <button type="submit" className="form-button">
+          {movieToEdit ? "Update" : "Add"}
+        </button>
       </form>
     </div>
   );

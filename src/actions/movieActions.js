@@ -18,6 +18,9 @@ export const fetchMovies = () => async (dispatch) => {
   }
 };
 
+// addMovie(movie) is an action creator that returns an asynchronous function.
+// async (dispatch) => { ... } is the asynchronous function that redux-thunk allows you to return. The dispatch function is injected here by redux-thunk.
+// Inside the function, you perform the asynchronous operation (API call using axios), and after the call is successful, you manually dispatch the ADD_MOVIE action with the result (response.data).
 export const addMovie = (movie) => async (dispatch) => {
   try {
     const response = await axios.post(`${baseurl}/api/movies`, movie);

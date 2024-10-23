@@ -1,0 +1,108 @@
+.movie-list-item {
+  list-style: none;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-list-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.movie-details {
+  margin-bottom: 15px;
+}
+
+.movie-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.movie-description, .movie-info {
+  margin: 5px 0;
+  color: #666;
+  font-size: 16px;
+}
+
+.movie-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+button {
+  padding: 8px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-watched {
+  background-color: #4caf50;
+  color: white;
+}
+
+.button-watched:hover {
+  background-color: #45a049;
+}
+
+.button-delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.button-delete:hover {
+  background-color: #d32f2f;
+}
+
+.button-edit, .button-rate, .button-review {
+  background-color: #2196f3;
+  color: white;
+}
+
+.button-edit:hover, .button-rate:hover, .button-review:hover {
+  background-color: #1976d2;
+}
+
+.edit-form {
+  margin-top: 15px;
+}
+
+.rate-form {
+  margin-top: 15px;
+}
+
+.review-form {
+  margin-top: 15px;
+}
+
+.rate-input, .review-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.rate-input:focus, .review-input:focus {
+  outline: none;
+  border-color: #2196f3;
+}
+
+.button-submit {
+  background-color: #4caf50;
+  color: white;
+}
+
+.button-submit:hover {
+  background-color: #45a049;
+}

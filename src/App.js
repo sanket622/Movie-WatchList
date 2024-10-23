@@ -1,10 +1,10 @@
 // App.js
 
-import React from 'react';
-import { Provider } from 'react-redux';
-import store from './store/store';
-import MovieList from './components/MovieList';
-import AddEditMovieForm from './components/AddEditMovieForm';
+import React from "react";
+import { Provider } from "react-redux";
+import store from "./store/store";
+import MovieList from "./components/MovieList";
+import AddEditMovieForm from "./components/AddEditMovieForm";
 
 function App() {
   return (

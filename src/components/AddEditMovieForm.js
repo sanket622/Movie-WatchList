@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addMovie, editMovie } from "../actions/movieActions";
-import "./AddEditMovieForm.css";
+import "../CSS/AddEditMovieForm.css";
 
 const AddEditMovieForm = ({ movieToEdit, onFormSubmit }) => {
   const [formData, setFormData] = useState({

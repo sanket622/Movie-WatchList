@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import AddEditMovieForm from "./AddEditMovieForm";
-import "./MovieListItem.css";
+import "../CSS/MovieListItem.css";
 
 const MovieListItem = ({
   movie,
   onDelete,
   onToggleWatched,
-  onEdit,
   onRate,
   onReview,
 }) => {
